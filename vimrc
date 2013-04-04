@@ -2,7 +2,7 @@
 
 set nocompatible	"Be iMproved
 
-set timeoutlen=250
+set timeoutlen=1000
 set backspace=indent,eol,start
 
 set history=50		" keep 50 lines of command line history
@@ -17,7 +17,7 @@ set softtabstop=4
 set nobackup
 set foldmethod=manual         " Fold on the manual
 let mapleader =','
-let maplocalleader=','
+let maplocalleader =','
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
