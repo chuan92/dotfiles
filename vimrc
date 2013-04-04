@@ -2,9 +2,10 @@
 
 set nocompatible	"Be iMproved
 
-set timeoutlen=1000
+set timeoutlen=1000		"map delay
 set backspace=indent,eol,start
 
+set autowrite
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -15,20 +16,24 @@ set cindent
 set shiftwidth=4
 set softtabstop=4
 set nobackup
-set foldmethod=manual         " Fold on the manual
+set foldmethod=syntax         " Fold on the syntax
+set foldcolumn=0
+setlocal foldlevel=1
+set foldlevelstart=99
 let mapleader =','
 let maplocalleader =','
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
 set mouse=a
 set mousehide
 set splitbelow
 set splitright
+
+set tags+=~/.tags			"add you own lib tags path here
+map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 filetype off        " required for vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -57,4 +62,3 @@ Bundle 'OmniCppComplete'
 "
 filetype plugin indent on    " required!
 set completeopt=longest,menu
-
