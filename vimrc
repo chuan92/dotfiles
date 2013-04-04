@@ -62,3 +62,4 @@ Bundle 'OmniCppComplete'
 "
 filetype plugin indent on    " required!
 set completeopt=longest,menu
+
