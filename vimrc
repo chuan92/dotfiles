@@ -1,4 +1,4 @@
-" Huang zhenchuan's vimrc file.
+" Huang Zhenchuan's vimrc file.
 
 set nocompatible	"Be iMproved
 
@@ -16,6 +16,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set nobackup
+set cursorline
 set foldmethod=syntax         " Fold on the syntax
 set foldcolumn=0
 setlocal foldlevel=1
@@ -36,7 +37,7 @@ set mousehide
 set splitbelow
 set splitright
 
-set tags+=~/.tags			"add you own lib tags path here
+set tags+=../tags
 map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "the c.vim style
@@ -52,6 +53,7 @@ Bundle 'molokai'
 
 
 colorscheme molokai
+"colorscheme desert
 set t_Co=256
 
 
@@ -78,6 +80,7 @@ let OmniCpp_MayCompleteScope = 1
 " option for javacomplete
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 autocmd Filetype python setlocal expandtab
+autocmd Filetype cpp setlocal tags+=~/.tags			"add cpp std lib tags path here
 
 "set encondig to avoid garbled
 set encoding=utf-8
