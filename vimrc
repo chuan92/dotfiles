@@ -50,13 +50,6 @@ call vundle#rc()
 " " required!
 Bundle 'gmarik/vundle'
 Bundle 'molokai'
-
-
-colorscheme molokai
-"colorscheme desert
-set t_Co=256
-
-
 Bundle 'c.vim'
 Bundle 'taglist.vim'
 Bundle 'scrooloose/syntastic'
@@ -65,13 +58,20 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'a.vim'
 Bundle 'OmniCppComplete'
 Bundle 'bash-support.vim'
+Bundle 'perl-support.vim'
 Bundle 'rails.vim'
 Bundle 'javacomplete'
-"Bundle 'Conque-Shell'
+Bundle 'terryma/vim-multiple-cursors'
+"Bundle 'ervandew/supertab'
+"Bundle 'altercation/vim-colors-solarized'
 " " vim-scripts repos
 " Bundle 'vim-plugin-foo'
 " Bundle 'vim-plugin-bar'
 "
+colorscheme molokai
+"colorscheme desert
+set t_Co=256
+
 filetype plugin indent on    " required!
 set completeopt=longest,menu
 
