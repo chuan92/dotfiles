@@ -1,2 +1,1 @@
-These are my configuration files in linux
-such as vimrc, bashrc.
+These are backups of my system configuration files
