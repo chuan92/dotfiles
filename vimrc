@@ -49,44 +49,50 @@ let g:tagbar_width=30
 "let g:C_Styles = { '*.c,*.h' : 'default', '*.cc,*.cpp,*.hh' : 'CPP' }
 filetype off        " required for vundle
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " " required!
-Bundle 'gmarik/vundle'
-Bundle 'c.vim'
-Bundle "majutsushi/tagbar.git"
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'a.vim'
-Bundle 'OmniCppComplete'
-Bundle 'bling/vim-airline'
+Plugin 'gmarik/vundle'
+Plugin 'c.vim'
+Plugin 'majutsushi/tagbar.git'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'a.vim'
+Plugin 'OmniCppComplete'
+Plugin 'bling/vim-airline'
 "for git
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-fugitive'
-"Bundle 'bash-support.vim'
-"Bundle 'perl-support.vim'
-Bundle 'klen/python-mode'
-"Bundle 'rails.vim'
-"Bundle 'javacomplete'
-"Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tomasr/molokai'
-Bundle 'ervandew/supertab'
-Bundle 'Raimondi/delimitMate'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'duythinht/vim-coffee'
-Bundle 'abra/vim-abra'
-Bundle 'chmllr/elrodeo-colorscheme'
-Bundle 'rizzatti/dash.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+"Plugin 'bash-support.vim'
+"Plugin 'perl-support.vim'
+Plugin 'klen/python-mode'
+"Plugin 'rails.vim'
+"Plugin 'javacomplete'
+"Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tomasr/molokai'
+"Plugin 'ervandew/supertab'
+Plugin 'Raimondi/delimitMate'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'duythinht/vim-coffee'
+Plugin 'abra/vim-abra'
+Plugin 'chmllr/elrodeo-colorscheme'
+Plugin 'rizzatti/dash.vim'
+Plugin 'JuliaLang/julia-vim'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'vim-scripts/argtextobj.vim'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'tpope/vim-markdown'
 " " vim-scripts repos
-" Bundle 'vim-plugin-foo'
-" Bundle 'vim-plugin-bar'
+" Plugin 'vim-plugin-foo'
+" Plugin 'vim-plugin-bar'
 "
-colorscheme desert
-
+call vundle#end()
 filetype plugin indent on    " required!
 "set completeopt=longest,menu
+colorscheme desert
 
 "settings for syntastic
 let g:syntastic_check_on_wq = 0
@@ -107,6 +113,10 @@ set laststatus=2
 
 "settings for delimitMate		do not match {}  << in c,cpp,java
 au FileType c,cpp,java let b:delimitMate_matchpairs = "(:),[:]"
+
+"settings for golden-ratio
+let g:golden_ratio_exclude_nonmodifiable = 1
+"let g:golden_ratio_autocommand = 0
 
 "option for javacomplete
 "autocmd Filetype java setlocal omnifunc=javacomplete#Complete
