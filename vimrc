@@ -48,12 +48,12 @@ let g:tagbar_width=30
 "the c.vim style
 "let g:C_Styles = { '*.c,*.h' : 'default', '*.cc,*.cpp,*.hh' : 'CPP' }
 filetype off        " required for vundle
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
 " " required!
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'c.vim'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'scrooloose/syntastic'
@@ -97,6 +97,8 @@ colorscheme desert
 "settings for syntastic
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_open = 0
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 "settings for python-mode
 let g:pymode_rope_lookup_project = 0
