@@ -35,7 +35,7 @@ set mouse=a
 set splitbelow
 set splitright
 
-
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 filetype off        " required for vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
