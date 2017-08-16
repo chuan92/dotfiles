@@ -43,15 +43,7 @@ call vundle#begin()
 " let Vundle manage Vundle
 " " required!
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'majutsushi/tagbar.git'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'a.vim'
 Plugin 'bling/vim-airline'
-"for git
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 " " vim-scripts repos
 "
@@ -60,11 +52,6 @@ filetype plugin indent on    " required!
 "set completeopt=longest,menu
 colorscheme monokai
 
-"settings for syntastic
-let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_open = 0
-"let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 
 "settings for vim-airline
@@ -86,6 +73,4 @@ if has("gui_running")
 	set showtabline=2
 	"set background=light
 	colorscheme solarized
-	"colorscheme molokai
-	"colorscheme desert
 endif
