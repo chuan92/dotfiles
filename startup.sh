@@ -9,5 +9,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # output is dotfiles-master directory
 unzip dotfiles.zip
 
-cp -r dotfiles-master/.[^.]* ./
+# copy dotfiles to home directory
+cp -r dotfiles-master/.[^.]* ~/
+
+# remove temp files
 rm -rf dotfiles-master dotfiles.zip
